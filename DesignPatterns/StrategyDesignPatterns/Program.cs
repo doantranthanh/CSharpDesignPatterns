@@ -16,7 +16,7 @@ namespace StrategyDesignPatterns
                     Console.Write("|| ");
                     context.SwitchStrategy();
                 }
-                Console.Write(context.Algorighm()+ " ");
+                Console.Write(context.Algorithm()+ " ");
             }
             Console.WriteLine();
             Console.ReadLine();
@@ -31,7 +31,7 @@ namespace StrategyDesignPatterns
 
         private IStrategy strategy = new Strategy1();
 
-        public int Algorighm()
+        public int Algorithm()
         {
             return strategy.Move(this);
         }

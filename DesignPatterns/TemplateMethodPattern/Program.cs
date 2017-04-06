@@ -6,9 +6,9 @@ namespace TemplateMethodPattern
     {
         static void Main()
         {
-            Algorithm m = new Algorithm();
-            m.TemplateMethod(new ClassA());
-            m.TemplateMethod(new ClassB());
+            var m = new Algorithm();
+            Algorithm.TemplateMethod(new ClassA());
+            Algorithm.TemplateMethod(new ClassB());
 
             Console.ReadLine();
         }
@@ -49,7 +49,7 @@ namespace TemplateMethodPattern
 
     internal class Algorithm
     {
-        public void TemplateMethod(IPrimitives a)
+        public static void TemplateMethod(IPrimitives a)
         {
             var s = a.Operation1() + a.Operation2();
             Console.WriteLine(s);
